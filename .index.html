@@ -1,0 +1,218 @@
+﻿<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>بداية القمم للتشغيل والصيانة | احترافية وموثوقية</title>
+    <style>
+        :root {
+            --primary-blue: #0056b3;
+            --dark-blue: #003d80;
+            --accent-orange: #f39c12;
+            --light-bg: #f8fbff;
+            --white: #ffffff;
+            --text-main: #333;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--light-bg);
+            color: var(--text-main);
+            scroll-behavior: smooth;
+        }
+
+        /* القائمة العلوية */
+        header {
+            background-color: var(--white);
+            padding: 10px 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: fixed;
+            width: 90%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo-box { display: flex; align-items: center; }
+        .logo-img { height: 50px; margin-left: 15px; }
+        
+        nav ul { list-style: none; display: flex; margin: 0; }
+        nav ul li { margin-right: 25px; }
+        nav ul li a { text-decoration: none; color: var(--primary-blue); font-weight: 600; }
+        nav ul li a:hover { color: var(--accent-orange); }
+
+        /* القسم الرئيسي المعدل (Hero) */
+        .hero {
+            background: linear-gradient(rgba(0, 61, 128, 0.8), rgba(0, 61, 128, 0.8)), url('https://images.unsplash.com/photo-1521737711867-e3b97375f902?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+            background-size: cover;
+            background-position: center;
+            color: var(--white);
+            padding: 120px 5% 80px;
+            text-align: center;
+            margin-top: 60px;
+        }
+
+        .hero h1 { font-size: 2.8em; margin-bottom: 20px; }
+        .hero p { font-size: 1.2em; max-width: 800px; margin: 0 auto 30px; line-height: 1.6; }
+
+        .btn {
+            background-color: var(--accent-orange);
+            color: white;
+            padding: 12px 35px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            display: inline-block;
+            transition: 0.3s;
+        }
+        .btn:hover { background-color: #e67e22; transform: scale(1.05); }
+
+        /* الأقسام المشتركة */
+        section { padding: 70px 10%; }
+        .section-title { text-align: center; color: var(--primary-blue); margin-bottom: 40px; font-size: 2em; }
+        .section-title::after { content: ''; display: block; width: 60px; height: 3px; background: var(--accent-orange); margin: 10px auto; }
+
+        /* قسم المميزات (لماذا نحن؟) */
+        .features { background-color: var(--white); display: flex; flex-wrap: wrap; gap: 20px; justify-content: center; }
+        .feat-item { flex: 1; min-width: 250px; text-align: center; padding: 20px; border: 1px solid #eee; border-radius: 10px; }
+        .feat-item i { font-size: 2.5em; color: var(--accent-orange); display: block; margin-bottom: 15px; }
+
+        /* قسم الخدمات (مطور) */
+        .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px; }
+        .service-card { background: white; padding: 30px; border-radius: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); text-align: center; border-bottom: 4px solid var(--primary-blue); }
+        .service-card h3 { color: var(--primary-blue); }
+
+        /* قسم آراء العملاء */
+        .testimonials { background-color: #f0f4f8; }
+        .test-grid { display: flex; flex-wrap: wrap; gap: 20px; }
+        .test-card { background: white; padding: 20px; border-radius: 10px; flex: 1; min-width: 280px; font-style: italic; position: relative; }
+        .test-card b { display: block; margin-top: 15px; color: var(--primary-blue); font-style: normal; }
+
+        /* قسم تواصل معنا المطور */
+        .contact-container { display: flex; flex-wrap: wrap; gap: 40px; }
+        .contact-info { flex: 1; }
+        .contact-form { flex: 1; background: white; padding: 30px; border-radius: 10px; box-shadow: 0 5px 20px rgba(0,0,0,0.1); }
+        .form-group { margin-bottom: 15px; }
+        .form-group input, .form-group textarea { width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 5px; box-sizing: border-box; }
+        .submit-btn { background: var(--primary-blue); color: white; border: none; padding: 10px 20px; cursor: pointer; border-radius: 5px; width: 100%; font-size: 1.1em; }
+
+        footer { background: var(--dark-blue); color: white; text-align: center; padding: 30px; margin-top: 50px; }
+
+        @media (max-width: 768px) {
+            header { flex-direction: column; text-align: center; }
+            nav ul { margin-top: 15px; }
+            .hero h1 { font-size: 1.8em; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo-box">
+            <img src="logo.png" alt="بداية القمم" class="logo-img">
+            <div>
+                <strong style="display:block; color:var(--primary-blue);">بداية القمم</strong>
+                <small style="color:var(--accent-orange);">Bidayat AlQimam</small>
+            </div>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#hero">الرئيسية</a></li>
+                <li><a href="#about">لماذا نحن</a></li>
+                <li><a href="#services">خدماتنا</a></li>
+                <li><a href="#contact">اتصل بنا</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="hero" class="hero">
+        <h1>حلول تشغيل وصيانة احترافية</h1>
+        <p>نحن في "بداية القمم" نؤمن بأن الكوادر البشرية هي أساس النجاح. نوفر لكم أفضل طواقم النظافة والضيافة والحراسات الأمنية في المملكة.</p>
+        <a href="#contact" class="btn">اطلب كوادرنا الآن</a>
+    </section>
+
+    <section id="about" class="features">
+        <div class="feat-item">
+            <span style="font-size: 40px;">🏆</span>
+            <h3>جودة معتمدة</h3>
+            <p>نلتزم بأعلى معايير التشغيل والصيانة لضمان رضاكم التام.</p>
+        </div>
+        <div class="feat-item">
+            <span style="font-size: 40px;">⚡</span>
+            <h3>استجابة سريعة</h3>
+            <p>فريقنا جاهز لتلبية طلباتكم وتوريد العمالة في أوقات قياسية.</p>
+        </div>
+        <div class="feat-item">
+            <span style="font-size: 40px;">👥</span>
+            <h3>كوادر مدربة</h3>
+            <p>جميع عمالتنا خاضعة لدورات تدريبية مكثفة في خدمة العملاء والمهام الفنية.</p>
+        </div>
+    </section>
+
+    <section id="services">
+        <h2 class="section-title">خدماتنا المتخصصة</h2>
+        <div class="services-grid">
+            <div class="service-card">
+                <h3>نظافة المنشآت</h3>
+                <p>تنظيف شامل للمكاتب، المجمعات، والقصور بأحدث الأدوات.</p>
+            </div>
+            <div class="service-card">
+                <h3>الضيافة (Tea Boy)</h3>
+                <p>طواقم (بنين وبنات) متميزين في فنون الضيافة والتقديم للمكاتب والمؤتمرات.</p>
+            </div>
+            <div class="service-card">
+                <h3>الحراسات الأمنية</h3>
+                <p>حراسة أمنية يقظة ومدربة (رجال ونساء) لحماية ممتلكاتكم على مدار الساعة.</p>
+            </div>
+            <div class="service-card">
+                <h3>عمالة المجمعات</h3>
+                <p>توفير عمالة مساندة للتشغيل والصيانة الدورية للمرافق.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="testimonials">
+        <h2 class="section-title">قالوا عن بداية القمم</h2>
+        <div class="test-grid">
+            <div class="test-card">
+                "تعاملنا معهم في توريد حراسات أمنية، وكانوا مثالاً في الانضباط والأمانة. شكراً لكم."
+                <b>- مدير إحدى الشركات العقارية بالرياض</b>
+            </div>
+            <div class="test-card">
+                "عمالة النظافة والضيافة لديهم على مستوى عالٍ من الرقي والنظافة الشخصية."
+                <b>- شركة فندقية كبرى</b>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2 class="section-title">تواصل معنا</h2>
+        <div class="contact-container">
+            <div class="contact-info">
+                <h3>معلومات التواصل</h3>
+                <p>📍 المقر الرئيسي: الرياض، المملكة العربية السعودية</p>
+                <p>📞 الجوال: 05XXXXXXXX</p>
+                <p>📧 البريد: info@bidayatalqimam.com</p>
+                <p>🕒 ساعات العمل: 8 صباحاً - 5 مساءً</p>
+            </div>
+            <div class="contact-form">
+                <form>
+                    <div class="form-group"><input type="text" placeholder="اسم الشركة / العميل" required></div>
+                    <div class="form-group"><input type="email" placeholder="البريد الإلكتروني" required></div>
+                    <div class="form-group"><textarea rows="4" placeholder="تفاصيل الطلب (نوع العمالة والعدد)"></textarea></div>
+                    <button type="submit" class="submit-btn">إرسال الطلب</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>جميع الحقوق محفوظة © 2026 بداية القمم للتشغيل والصيانة</p>
+            </footer>
+
+</body>
+</html>
